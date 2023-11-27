@@ -55,7 +55,7 @@ namespace GiantParticle.InspectorGraph.PropertyDrawers
             // Add list
             _listView = new ListView(_filteredOptions, kItemHeight, MakeItem, BindItem);
             _listView.selectionType = SelectionType.Single;
-            _listView.onItemsChosen += objects =>
+            _listView.itemsChosen += objects =>
             {
                 foreach (object o in objects)
                     _selectionCallback?.Invoke((Type)o);
